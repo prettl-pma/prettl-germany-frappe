@@ -59,10 +59,10 @@
  "links": [
   {
    "link_doctype": "Check Driver License",
-   "link_fieldname": "drivers_email"
+   "link_fieldname": "driver_email"
   }
  ],
- "modified": "2025-11-11 10:26:35.581363",
+ "modified": "2025-11-11 12:39:31.287246",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Driver License",

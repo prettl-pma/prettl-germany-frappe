@@ -7,16 +7,17 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_rhpt",
-  "verifiers_email",
+  "verifier_email",
   "column_break_bghv",
-  "verifiers_name",
+  "verifier_name",
   "driver_details_section",
-  "drivers_email",
-  "drivers_name",
+  "driver_email",
+  "driver_name",
   "status",
   "column_break_ugfy",
   "driving_licence_number",
   "expiry_date",
+  "verification_date",
   "amended_from"
  ],
  "fields": [
@@ -35,41 +36,14 @@
    "search_index": 1
   },
   {
-   "fieldname": "verifiers_email",
-   "fieldtype": "Link",
-   "label": "Verifier's Email",
-   "options": "User",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "verifiers_email.full_name",
-   "fieldname": "verifiers_name",
-   "fieldtype": "Data",
-   "label": "Verifier's Name",
-   "read_only": 1
-  },
-  {
-   "fieldname": "drivers_email",
-   "fieldtype": "Link",
-   "label": "Driver's Email",
-   "options": "Driver License"
-  },
-  {
-   "fetch_from": "drivers_email.drivers_name",
-   "fieldname": "drivers_name",
-   "fieldtype": "Data",
-   "label": "Driver's Name",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "drivers_email.driving_license_number",
+   "fetch_from": "driver_email.driving_license_number",
    "fieldname": "driving_licence_number",
    "fieldtype": "Data",
    "label": "Driving Licence Number",
    "read_only": 1
   },
   {
-   "fetch_from": "drivers_email.expiry_date",
+   "fetch_from": "driver_email.expiry_date",
    "fieldname": "expiry_date",
    "fieldtype": "Date",
    "label": "Expiry Date",
@@ -79,7 +53,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Active\nExpired"
+   "options": "Active\nExpired",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_bghv",
@@ -93,13 +68,49 @@
   {
    "fieldname": "column_break_ugfy",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verifier_email",
+   "fieldtype": "Link",
+   "label": "Verifier Email",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "verifiers_email.full_name",
+   "fieldname": "verifier_name",
+   "fieldtype": "Data",
+   "label": "Verifier Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "driver_email",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Driver Email",
+   "options": "Driver License",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "driver_email.drivers_name",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "verification_date",
+   "fieldtype": "Date",
+   "label": "Verification Date",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-11 10:25:58.713674",
+ "modified": "2025-11-11 12:27:20.617295",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Check Driver License",
