@@ -113,7 +113,7 @@
  "modified": "2025-11-11 12:27:20.617295",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
- "name": "Check Driver License",
+ "name": "Verify Driver License",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

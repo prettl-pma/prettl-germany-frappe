@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestCheckDriverLicense(FrappeTestCase):
+class TestCarMaintenance(FrappeTestCase):
 	pass

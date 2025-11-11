@@ -151,7 +151,6 @@
   {
    "fieldname": "lessor",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Lessor",
    "options": "Supplier",
    "reqd": 1
@@ -165,7 +164,7 @@
    "reqd": 1
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "is_vehicle_active",
    "fieldtype": "Check",
    "label": "Is Vehicle Active"
@@ -173,6 +172,7 @@
   {
    "fieldname": "return_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Return Date",
    "read_only": 1
   },
@@ -231,7 +231,9 @@
    "fetch_from": "current_driver.full_name",
    "fieldname": "current_driver_name",
    "fieldtype": "Data",
-   "label": "Current Driver Name"
+   "in_list_view": 1,
+   "label": "Current Driver Name",
+   "read_only": 1
   },
   {
    "fieldname": "current_driver_email",
@@ -247,9 +249,13 @@
   {
    "link_doctype": "Car Driver",
    "link_fieldname": "car"
+  },
+  {
+   "link_doctype": "Car Maintenance",
+   "link_fieldname": "car"
   }
  ],
- "modified": "2025-11-11 12:01:40.139770",
+ "modified": "2025-11-11 13:19:05.494788",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car",

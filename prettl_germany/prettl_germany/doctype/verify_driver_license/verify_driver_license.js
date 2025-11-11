@@ -1,7 +1,7 @@
 // Copyright (c) 2025, Girman Tech and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Check Driver License', {
+frappe.ui.form.on('Verify Driver License', {
     onload: function(frm) {
         // Only set on new form
         if (frm.is_new()) {

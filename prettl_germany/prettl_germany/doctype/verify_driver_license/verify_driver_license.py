@@ -5,7 +5,7 @@ import frappe
 from frappe.model.document import Document
 
 
-class CheckDriverLicense(Document):
+class VerifyDriverLicense(Document):
 	def on_submit(self):
 		driver_license_doc = frappe.get_doc("Driver License", self.driver_email)
 		driver_license_doc.append("driver_license_verifier_details",{

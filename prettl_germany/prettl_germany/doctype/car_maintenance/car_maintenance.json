@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CM-{######}",
+ "creation": "2025-11-11 12:45:40.249547",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "car",
+  "maintenance_type",
+  "column_break_cwuj",
+  "date_of_completion",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "car",
+   "fieldtype": "Link",
+   "label": "Car",
+   "options": "Car"
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Type",
+   "options": "Summer Tyre Equipment\nWinter Tyre Equipment"
+  },
+  {
+   "fieldname": "date_of_completion",
+   "fieldtype": "Date",
+   "label": "Date of Completion"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Changed\nUnchanged"
+  },
+  {
+   "fieldname": "column_break_cwuj",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-11 12:54:16.983029",
+ "modified_by": "Administrator",
+ "module": "Prettl Germany",
+ "name": "Car Maintenance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
