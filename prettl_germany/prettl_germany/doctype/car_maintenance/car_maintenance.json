@@ -8,9 +8,11 @@
  "field_order": [
   "car",
   "maintenance_type",
+  "uuid",
   "column_break_cwuj",
   "date_of_completion",
-  "status"
+  "status",
+  "amended_from"
  ],
  "fields": [
   {
@@ -34,21 +36,39 @@
    "label": "Date of Completion"
   },
   {
+   "fieldname": "column_break_cwuj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Car Maintenance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "uuid",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "UUID",
+   "read_only": 1
+  },
+  {
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
    "options": "Changed\nUnchanged"
-  },
-  {
-   "fieldname": "column_break_cwuj",
-   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-11-11 13:38:05.077423",
+ "modified": "2025-11-11 14:35:38.514034",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car Maintenance",

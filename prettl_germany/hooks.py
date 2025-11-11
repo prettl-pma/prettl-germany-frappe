@@ -5,6 +5,18 @@ app_description = "Customization for Prettl Germany"
 app_email = "naman.agrawal@girmantech.com"
 app_license = "mit"
 
+scheduler_events = {
+    "cron": {
+        # At 06:00 on 1 April
+        "0 6 1 4 *": [
+            "prettl_germany.tasks.car_utils.check_summer_tyre_due"
+        ],
+        # At 06:00 on 1 October
+        "0 6 1 10 *": [
+            "prettl_germany.tasks.car_utils.check_winter_tyre_due"
+        ],
+    }
+}
 # Apps
 # ------------------
 
