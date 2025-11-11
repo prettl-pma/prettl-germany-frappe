@@ -1,0 +1,277 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:licence_plate",
+ "creation": "2025-11-11 05:26:14.694428",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "co2_emission_value",
+  "cost_center",
+  "column_break_wwhq",
+  "lessor",
+  "vehicle_group",
+  "car_management_group",
+  "is_vehicle_active",
+  "car_details_section",
+  "model",
+  "licence_plate",
+  "vin_number",
+  "column_break_kdak",
+  "initial_registration",
+  "current_approval",
+  "section_break_scww",
+  "current_driver_email",
+  "current_driver_name",
+  "column_break_kvsz",
+  "return_date",
+  "handover_date",
+  "contract_details_section",
+  "contract_number",
+  "contract_type",
+  "duration_of_contractin_months",
+  "agreed_start_date",
+  "agreed_end_date",
+  "column_break_ialk",
+  "actual_end_of_contract",
+  "agreed_total_mileage",
+  "total_rate",
+  "gross_list_price",
+  "section_break_rkze",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "co2_emission_value",
+   "fieldtype": "Float",
+   "label": "CO2 values \u200b\u200baccording to NEDC (g/100KM)",
+   "precision": "0"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "licence_plate",
+   "fieldtype": "Data",
+   "label": "Licence Plate",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "car_management_group",
+   "fieldtype": "Link",
+   "label": "Car Management Group",
+   "options": "Car Management Group"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Car Cost Center"
+  },
+  {
+   "fieldname": "vin_number",
+   "fieldtype": "Data",
+   "label": "VIN Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_number",
+   "fieldtype": "Data",
+   "label": "Contract Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Agreed type of Contract",
+   "options": "Car Contract Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration_of_contractin_months",
+   "fieldtype": "Int",
+   "label": "Duration of Contract (In Months)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "car_details_section",
+   "fieldtype": "Section Break",
+   "label": "Car Details"
+  },
+  {
+   "fieldname": "column_break_kdak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_scww",
+   "fieldtype": "Section Break",
+   "label": "Current Driver Details"
+  },
+  {
+   "fieldname": "section_break_rkze",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_kvsz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "column_break_ialk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wwhq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lessor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lessor",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_group",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Vehicle Group",
+   "options": "1\n2\n3",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_vehicle_active",
+   "fieldtype": "Check",
+   "label": "Is Vehicle Active"
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Return Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "handover_date",
+   "fieldtype": "Date",
+   "label": "Handover Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "initial_registration",
+   "fieldtype": "Date",
+   "label": "Initial registration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_approval",
+   "fieldtype": "Date",
+   "label": "Current approval"
+  },
+  {
+   "fieldname": "agreed_start_date",
+   "fieldtype": "Date",
+   "label": "Agreed Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agreed_end_date",
+   "fieldtype": "Date",
+   "label": "Agreed End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_end_of_contract",
+   "fieldtype": "Date",
+   "label": "Actual End of Contract"
+  },
+  {
+   "fieldname": "agreed_total_mileage",
+   "fieldtype": "Int",
+   "label": "Agreed Total Mileage (In KM)"
+  },
+  {
+   "fieldname": "total_rate",
+   "fieldtype": "Currency",
+   "label": "Total Rate",
+   "precision": "0"
+  },
+  {
+   "fieldname": "gross_list_price",
+   "fieldtype": "Currency",
+   "label": "Gross List price",
+   "precision": "0"
+  },
+  {
+   "fetch_from": "current_driver.full_name",
+   "fieldname": "current_driver_name",
+   "fieldtype": "Data",
+   "label": "Current Driver Name"
+  },
+  {
+   "fieldname": "current_driver_email",
+   "fieldtype": "Link",
+   "label": "Current Driver Email",
+   "options": "User",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Car Driver",
+   "link_fieldname": "car"
+  }
+ ],
+ "modified": "2025-11-11 12:01:40.139770",
+ "modified_by": "Administrator",
+ "module": "Prettl Germany",
+ "name": "Car",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
