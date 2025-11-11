@@ -16,23 +16,27 @@
   {
    "fieldname": "car",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Car",
    "options": "Car"
   },
   {
    "fieldname": "maintenance_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Maintenance Type",
    "options": "Summer Tyre Equipment\nWinter Tyre Equipment"
   },
   {
    "fieldname": "date_of_completion",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Date of Completion"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Changed\nUnchanged"
   },
@@ -44,7 +48,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-11 12:54:16.983029",
+ "modified": "2025-11-11 13:38:05.077423",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car Maintenance",

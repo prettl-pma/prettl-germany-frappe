@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:CDL-{######}",
+ "autoname": "format:VDL-{######}",
  "creation": "2025-11-11 10:12:06.333329",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -30,7 +30,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Check Driver License",
+   "options": "Verify Driver License",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -52,6 +52,7 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Active\nExpired",
    "reqd": 1
@@ -80,13 +81,13 @@
    "fetch_from": "verifiers_email.full_name",
    "fieldname": "verifier_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Verifier Name",
    "read_only": 1
   },
   {
    "fieldname": "driver_email",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Driver Email",
    "options": "Driver License",
    "reqd": 1
@@ -95,6 +96,7 @@
    "fetch_from": "driver_email.drivers_name",
    "fieldname": "driver_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Driver Name",
    "read_only": 1
   },
@@ -102,6 +104,7 @@
    "default": "Today",
    "fieldname": "verification_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Verification Date",
    "reqd": 1
   }
@@ -110,7 +113,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-11 12:27:20.617295",
+ "modified": "2025-11-11 13:36:25.553253",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Verify Driver License",

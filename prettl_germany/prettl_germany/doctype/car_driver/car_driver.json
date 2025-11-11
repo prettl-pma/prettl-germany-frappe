@@ -18,17 +18,20 @@
   {
    "fieldname": "car",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Car",
    "options": "Car"
   },
   {
    "fieldname": "return_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Return Date"
   },
   {
    "fieldname": "handover_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Handover Date"
   },
   {
@@ -46,6 +49,7 @@
    "fetch_from": "driver_email.full_name",
    "fieldname": "driver_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Driver Name",
    "read_only": 1
   },
@@ -64,7 +68,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-11 11:53:46.327499",
+ "modified": "2025-11-11 13:38:32.296368",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car Driver",

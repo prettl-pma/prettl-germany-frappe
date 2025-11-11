@@ -19,6 +19,7 @@
    "fetch_from": "drivers_email.full_name",
    "fieldname": "drivers_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Driver's Name"
   },
   {
@@ -29,6 +30,7 @@
   {
    "fieldname": "expiry_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Expiry Date"
   },
   {
@@ -58,11 +60,11 @@
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "link_doctype": "Check Driver License",
+   "link_doctype": "Verify Driver License",
    "link_fieldname": "driver_email"
   }
  ],
- "modified": "2025-11-11 12:39:31.287246",
+ "modified": "2025-11-11 13:35:10.452933",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Driver License",
