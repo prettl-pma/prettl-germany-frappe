@@ -6,7 +6,21 @@ app_email = "naman.agrawal@girmantech.com"
 app_license = "mit"
 
 fixtures = [
-    {"doctype": "Web Page",}
+    {
+        "doctype": "Web Page"
+    },
+    {
+        "doctype": "Role",
+        "filters": [
+            ["name", "in", ["Car Management Edit", "Car Management Read"]]
+        ]
+    },
+    {
+        "doctype": "Custom DocPerm",
+        "filters": [
+            ["role", "in", ["Car Management Edit", "Car Management Read"]]
+        ]
+    }
 ]
 
 scheduler_events = {
