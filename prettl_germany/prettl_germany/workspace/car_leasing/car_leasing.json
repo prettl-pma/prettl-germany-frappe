@@ -1,0 +1,126 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"h1hfDDPMaA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Car Details</b></span>\",\"col\":12}},{\"id\":\"BWxG8JQ8DZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Car\",\"col\":3}},{\"id\":\"E6_D7La2mK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"View Cars\",\"col\":3}},{\"id\":\"GufKzVVNvh\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"r7QFdGS5JJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Driver Details</b></span>\",\"col\":12}},{\"id\":\"wT9b5KqboS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Car to Driver\",\"col\":3}},{\"id\":\"mLy2mT6xJ7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"View Drivers\",\"col\":3}},{\"id\":\"_dtUsCrK2_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"dvPJ7OjtAH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Driver License</b></span>\",\"col\":12}},{\"id\":\"KvnCgTt9xt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Driver License\",\"col\":3}},{\"id\":\"lFouyMLAib\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"View Driver License\",\"col\":3}},{\"id\":\"-d8V6ydiYo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Verify Driver License\",\"col\":3}},{\"id\":\"v402THEWMr\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"F1G3Li-RoO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Maintenance</b></span>\",\"col\":12}},{\"id\":\"i1WQWDM5nQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Tyre Change\",\"col\":3}},{\"id\":\"Ad7JppEpT3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"View Tyres Changes\",\"col\":3}},{\"id\":\"wziTPzXDO8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"CkoTP5Z9DD\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Masters</b></span>\",\"col\":12}},{\"id\":\"CktHBgyT8V\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Contract Type\",\"col\":3}},{\"id\":\"BecCMh4YCu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Cost Center\",\"col\":3}},{\"id\":\"YILgFwu1ue\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Management Group\",\"col\":3}}]",
+ "creation": "2025-11-12 05:14:11.118711",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "sort",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Car Leasing",
+ "links": [],
+ "modified": "2025-11-12 05:33:20.676693",
+ "modified_by": "Administrator",
+ "module": "Prettl Germany",
+ "name": "Car Leasing",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 28.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Tyre Change",
+   "link_to": "Car Maintenance",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Car",
+   "link_to": "Car",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "View Drivers",
+   "link_to": "Car Driver",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Assign Car to Driver",
+   "link_to": "Car Driver",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "View Tyres Changes",
+   "link_to": "Car Maintenance",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "View Cars",
+   "link_to": "Car",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Driver License",
+   "link_to": "Driver License",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "View Driver License",
+   "link_to": "Driver License",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Contract Type",
+   "link_to": "Car Contract Type",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Verify Driver License",
+   "link_to": "Verify Driver License",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Cost Center",
+   "link_to": "Car Cost Center",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Management Group",
+   "link_to": "Car Management Group",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Car Leasing"
+}

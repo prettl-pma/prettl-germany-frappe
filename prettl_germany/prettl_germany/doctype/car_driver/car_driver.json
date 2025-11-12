@@ -42,8 +42,7 @@
    "fieldname": "driver_email",
    "fieldtype": "Link",
    "label": "Driver email",
-   "options": "User",
-   "unique": 1
+   "options": "User"
   },
   {
    "fetch_from": "driver_email.full_name",
@@ -68,7 +67,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-11 13:38:32.296368",
+ "modified": "2025-11-12 05:40:52.386662",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car Driver",

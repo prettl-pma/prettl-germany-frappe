@@ -5,6 +5,10 @@ app_description = "Customization for Prettl Germany"
 app_email = "naman.agrawal@girmantech.com"
 app_license = "mit"
 
+fixtures = [
+    {"doctype": "Web Page",}
+]
+
 scheduler_events = {
     "cron": {
         # At 06:00 on 1 April
