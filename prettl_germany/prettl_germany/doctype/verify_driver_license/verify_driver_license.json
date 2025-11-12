@@ -39,14 +39,14 @@
    "fetch_from": "driver_email.driving_license_number",
    "fieldname": "driving_licence_number",
    "fieldtype": "Data",
-   "label": "Driving Licence Number",
+   "label": "Driving Licence Number(F\u00fchrerscheinnummer)",
    "read_only": 1
   },
   {
    "fetch_from": "driver_email.expiry_date",
    "fieldname": "expiry_date",
    "fieldtype": "Date",
-   "label": "Expiry Date",
+   "label": "Expiry Date(Verfallsdatum)",
    "read_only": 1
   },
   {
@@ -73,7 +73,7 @@
   {
    "fieldname": "verifier_email",
    "fieldtype": "Link",
-   "label": "Verifier Email",
+   "label": "Verifier Email(E-Mail des Verifizierers)",
    "options": "User",
    "read_only": 1
   },
@@ -82,13 +82,13 @@
    "fieldname": "verifier_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Verifier Name",
+   "label": "Verifier Name(Name des Verifizierers)",
    "read_only": 1
   },
   {
    "fieldname": "driver_email",
    "fieldtype": "Link",
-   "label": "Driver Email",
+   "label": "Driver Email(E-Mail des Fahrers)",
    "options": "Driver License",
    "reqd": 1
   },
@@ -97,7 +97,7 @@
    "fieldname": "driver_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Driver Name",
+   "label": "Driver Name(Fahrername)",
    "read_only": 1
   },
   {
@@ -105,7 +105,7 @@
    "fieldname": "verification_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Verification Date",
+   "label": "Verification Date(Verifizierungsdatum)",
    "reqd": 1
   }
  ],
@@ -113,7 +113,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-11 13:36:25.553253",
+ "modified": "2025-11-12 11:29:58.168108",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Verify Driver License",

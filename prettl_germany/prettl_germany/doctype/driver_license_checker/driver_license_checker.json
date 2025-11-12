@@ -15,7 +15,7 @@
    "fieldname": "verification_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Verification Date"
+   "label": "Verification Date(Verifizierungsdatum)"
   },
   {
    "fieldname": "status",
@@ -28,14 +28,14 @@
    "fieldname": "verifier_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Verifier Name"
+   "label": "Verifier Name(Name des Verifizierers)"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-11-11 12:26:20.095061",
+ "modified": "2025-11-12 11:32:04.661423",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Driver License Checker",

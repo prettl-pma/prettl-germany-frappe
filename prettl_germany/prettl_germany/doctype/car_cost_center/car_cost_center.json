@@ -12,14 +12,14 @@
   {
    "fieldname": "cost_center",
    "fieldtype": "Data",
-   "label": "Cost Center",
+   "label": "Cost Center(Kostenstelle)",
    "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-11 06:22:52.511029",
+ "modified": "2025-11-12 11:32:59.076229",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car Cost Center",

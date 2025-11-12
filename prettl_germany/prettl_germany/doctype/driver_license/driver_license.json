@@ -20,18 +20,18 @@
    "fieldname": "drivers_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Driver's Name"
+   "label": "Driver's Name(Fahrername)"
   },
   {
    "fieldname": "driving_license_number",
    "fieldtype": "Data",
-   "label": "Driving License Number"
+   "label": "Driving License Number(F\u00fchrerscheinnummer)"
   },
   {
    "fieldname": "expiry_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Expiry Date"
+   "label": "Expiry Date(Verfallsdatum)"
   },
   {
    "fieldname": "column_break_hqvo",
@@ -44,14 +44,14 @@
   {
    "fieldname": "driver_license_verifier_details",
    "fieldtype": "Table",
-   "label": "Driver License Verifier Details",
+   "label": "Driver License Verifier Details(Details zum F\u00fchrerscheinpr\u00fcfer)",
    "options": "Driver License Checker",
    "read_only": 1
   },
   {
    "fieldname": "drivers_email",
    "fieldtype": "Link",
-   "label": "Driver's Email",
+   "label": "Driver's Email(E-Mail des Fahrers)",
    "options": "User",
    "unique": 1
   }
@@ -64,7 +64,7 @@
    "link_fieldname": "driver_email"
   }
  ],
- "modified": "2025-11-11 13:35:10.452933",
+ "modified": "2025-11-12 11:31:26.555570",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Driver License",

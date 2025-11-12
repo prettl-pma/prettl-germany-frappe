@@ -12,14 +12,14 @@
   {
    "fieldname": "car_management_group",
    "fieldtype": "Data",
-   "label": "Car Management Group",
+   "label": "Car Management Group(Fuhrpark)",
    "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-11 06:18:03.677330",
+ "modified": "2025-11-12 11:33:17.426111",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car Management Group",
