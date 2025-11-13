@@ -46,7 +46,7 @@
    "fetch_from": "driver_email.expiry_date",
    "fieldname": "expiry_date",
    "fieldtype": "Date",
-   "label": "Expiry Date(Verfallsdatum)",
+   "label": "Expiry Date(Ablaufsdatum)",
    "read_only": 1
   },
   {
@@ -113,7 +113,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-12 11:29:58.168108",
+ "modified": "2025-11-13 05:27:35.651109",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Verify Driver License",

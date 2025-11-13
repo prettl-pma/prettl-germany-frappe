@@ -97,7 +97,7 @@
   {
    "fieldname": "contract_type",
    "fieldtype": "Link",
-   "label": "Agreed type of Contract(Vereinbarte Vertragsart)",
+   "label": "Agreed type of Contract(Vertragsart)",
    "options": "Car Contract Type",
    "reqd": 1
   },
@@ -255,7 +255,7 @@
    "link_fieldname": "car"
   }
  ],
- "modified": "2025-11-12 11:21:09.862468",
+ "modified": "2025-11-13 05:24:12.401222",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car",

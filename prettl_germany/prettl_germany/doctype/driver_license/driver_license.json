@@ -31,7 +31,7 @@
    "fieldname": "expiry_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Expiry Date(Verfallsdatum)"
+   "label": "Expiry Date(Ablaufsdatum)"
   },
   {
    "fieldname": "column_break_hqvo",
@@ -64,7 +64,7 @@
    "link_fieldname": "driver_email"
   }
  ],
- "modified": "2025-11-12 11:31:26.555570",
+ "modified": "2025-11-13 05:26:20.619420",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Driver License",
