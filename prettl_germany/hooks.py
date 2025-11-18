@@ -33,6 +33,10 @@ scheduler_events = {
         "0 6 1 10 *": [
             "prettl_germany.tasks.car_utils.check_winter_tyre_due"
         ],
+        # Run every 1st January at 6:00 AM
+        "0 6 1 1 *": [
+            "prettl_germany.tasks.earned_leave_allocation.allocate_earned_leave"
+        ],
     }
 }
 # Apps

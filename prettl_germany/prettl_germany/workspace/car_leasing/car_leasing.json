@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Car Leasing",
  "links": [],
- "modified": "2025-11-13 05:23:33.151709",
+ "modified": "2025-11-14 05:22:01.365680",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car Leasing",
@@ -22,7 +22,14 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Car Management Edit"
+  },
+  {
+   "role": "Car Management Read"
+  }
+ ],
  "sequence_id": 28.0,
  "shortcuts": [
   {
