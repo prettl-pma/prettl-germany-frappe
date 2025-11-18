@@ -1,21 +1,13 @@
 import frappe
-from frappe.utils import now_datetime, getdate
-
-def round_to_half(n):
-    """Round a number to nearest 0.5"""
-    return round(n * 2) / 2
+from datetime import datetime, date
 
 def allocate_earned_leave():
-    today = now_datetime().date()
+    today = date.today()
 
-    current_year = today.year
-    fixed_leave = 18
+    next_year = today.year + 1
+    leave_type = "Earned Leave"
 
-    # Calculate last year boundaries
-    last_year_start = getdate(f"{current_year - 1}-01-01")
-    last_year_end = getdate(f"{current_year - 1}-12-31")
-
-    # Fetch all active employees
+    # Get all active employees
     employees = frappe.get_all(
         "Employee",
         filters={"status": "Active"},
@@ -24,41 +16,44 @@ def allocate_earned_leave():
 
     for emp in employees:
         doj = emp.date_of_joining
-        if not doj:
-            continue
 
-        # CASE 1: Joined before last year → full 18 leaves
-        if doj < last_year_start:
-            leave_count = fixed_leave
-
-        # CASE 2: Joined last year → pro-rata
-        elif last_year_start <= doj <= last_year_end:
-            # Count months worked in the last year
-            months_worked = ((last_year_end.year - doj.year) * 12 +
-                             (last_year_end.month - doj.month) + 1)
-
-            leave_count = (months_worked / 12) * fixed_leave
-            leave_count = round_to_half(leave_count)  # round to nearest 0.5
-
-        # CASE 3: Joined this year → 0 leaves
+        # Calculate earned leaves
+        if doj.year < today.year:  
+            # Joined before this year → full 18 leaves
+            leave_count = 18
         else:
-            leave_count = 0
+            # Joined this year → pro rata for next year
+            months_worked = 12 - doj.month + 1
+            leave_count = round((18 / 12) * months_worked * 2) / 2  # round to 0.5
 
+        # Skip if 0 leaves (HRMS validation)
         if leave_count == 0:
             continue
 
-        # Create Leave Allocation document
+        # Prevent duplicate allocation for next year
+        exists = frappe.db.exists(
+            "Leave Allocation",
+            {
+                "employee": emp.name,
+                "leave_type": leave_type,
+                "from_date": f"{next_year}-01-01",
+                "to_date": f"{next_year}-12-31",
+            }
+        )
+
+        if exists:
+            continue
+
+        # Create Leave Allocation
         allocation = frappe.get_doc({
             "doctype": "Leave Allocation",
             "employee": emp.name,
-            "leave_type": "Earned Leave",
-            "from_date": f"{current_year}-01-01",
-            "to_date": f"{current_year}-12-31",
+            "leave_type": leave_type,
+            "from_date": f"{next_year}-01-01",
+            "to_date": f"{next_year}-12-31",
             "new_leaves_allocated": leave_count,
-            "company": emp.company
+            "company": emp.company,
         })
-        print(f"Allocating {leave_count} leaves to {emp.name}")
 
         allocation.insert(ignore_permissions=True)
         allocation.submit()
-        frappe.db.commit()
