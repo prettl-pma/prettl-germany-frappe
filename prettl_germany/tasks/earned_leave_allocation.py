@@ -7,10 +7,19 @@ def allocate_earned_leave():
     next_year = today.year + 1
     leave_type = "Earned Leave"
 
+    # Allowed companies
+    allowed_companies = [
+        "Prebo Automotive Private Limited",
+        "Prettl mechatronics & Actuators Services Private Limited"
+    ]
+
     # Get all active employees
     employees = frappe.get_all(
         "Employee",
-        filters={"status": "Active"},
+        filters={
+            "status": "Active",
+            "company": ["in", allowed_companies]
+        },
         fields=["name", "date_of_joining", "company"]
     )
 
@@ -38,6 +47,7 @@ def allocate_earned_leave():
                 "leave_type": leave_type,
                 "from_date": f"{next_year}-01-01",
                 "to_date": f"{next_year}-12-31",
+                "docstatus": 1
             }
         )
 
