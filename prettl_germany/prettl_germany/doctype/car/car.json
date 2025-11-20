@@ -23,7 +23,8 @@
   "current_approval",
   "section_break_scww",
   "current_driver_email",
-  "current_driver_name",
+  "current_driver_first_name",
+  "current_driver_last_name",
   "column_break_kvsz",
   "return_date",
   "handover_date",
@@ -224,22 +225,28 @@
   {
    "fieldname": "gross_list_price",
    "fieldtype": "Currency",
-   "label": "Gross List price(BLP)",
+   "label": "Gross List price(BLP In Euros)",
    "precision": "0"
-  },
-  {
-   "fetch_from": "current_driver.full_name",
-   "fieldname": "current_driver_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Current Driver Name(Aktueller Fahrername)",
-   "read_only": 1
   },
   {
    "fieldname": "current_driver_email",
    "fieldtype": "Link",
    "label": "Current Driver Email(Aktuelle Fahrer-E-Mail)",
    "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_driver_first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Current Driver First Name(Aktueller Vorname des Fahrers)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_driver_last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Current Driver Last Name(Aktueller Nachname des Fahrers)",
    "read_only": 1
   }
  ],
@@ -255,7 +262,7 @@
    "link_fieldname": "car"
   }
  ],
- "modified": "2025-11-13 05:24:12.401222",
+ "modified": "2025-11-20 06:30:47.729169",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car",

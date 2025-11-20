@@ -7,7 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "drivers_email",
-  "drivers_name",
+  "driver_first_name",
+  "driver_last_name",
   "column_break_hqvo",
   "driving_license_number",
   "expiry_date",
@@ -15,13 +16,6 @@
   "driver_license_verifier_details"
  ],
  "fields": [
-  {
-   "fetch_from": "drivers_email.full_name",
-   "fieldname": "drivers_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Driver's Name(Fahrername)"
-  },
   {
    "fieldname": "driving_license_number",
    "fieldtype": "Data",
@@ -54,6 +48,20 @@
    "label": "Driver's Email(E-Mail des Fahrers)",
    "options": "User",
    "unique": 1
+  },
+  {
+   "fetch_from": "drivers_email.first_name",
+   "fieldname": "driver_first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Driver First Name(Vorname des Fahrers)"
+  },
+  {
+   "fetch_from": "drivers_email.last_name",
+   "fieldname": "driver_last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Driver Last Name(Nachname des Fahrers)"
   }
  ],
  "grid_page_length": 50,
@@ -64,7 +72,7 @@
    "link_fieldname": "driver_email"
   }
  ],
- "modified": "2025-11-13 05:26:20.619420",
+ "modified": "2025-11-20 06:32:15.325007",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Driver License",

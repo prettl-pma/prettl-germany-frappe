@@ -26,7 +26,7 @@ def check_tyre_due(tyre_type):
         frappe.log_error(f"Unknown tyre type: {tyre_type}", "check_tyre_due")
         return
 
-    cars = frappe.get_all("Car", fields=["name", "model", "current_driver_email", "current_driver_name"])
+    cars = frappe.get_all("Car", fields=["name", "model", "current_driver_email", "current_driver_first_name", "current_driver_last_name"])
 
     for car in cars:
         exists = frappe.db.exists(
@@ -40,10 +40,10 @@ def check_tyre_due(tyre_type):
         )
 
         if not exists:
-            send_tyre_mail(car.name, car.model, car.current_driver_email, car.current_driver_name, tyre_type)
+            send_tyre_mail(car.name, car.model, car.current_driver_email, car.current_driver_first_name, car.current_driver_last_name, tyre_type)
 
 
-def send_tyre_mail(car_name, model, driver_email, driver_name, tyre_type):
+def send_tyre_mail(car_name, model, driver_email, driver_first_name, driver_last_name, tyre_type):
     """Send reminder email and create draft Car Maintenance record."""
 
     if not driver_email:
@@ -65,7 +65,7 @@ def send_tyre_mail(car_name, model, driver_email, driver_name, tyre_type):
 
     subject = f"{tyre_type.replace('Equipment','')} Change Due"
     message = f"""
-        <p>Dear {driver_name},</p>
+        <p>Dear {driver_last_name}, {driver_first_name},</p>
 
         <p>Our records indicate that your car <b>{model} - {car_name}</b> has not had a
         <b>{tyre_type}</b> maintenance this year.</p>

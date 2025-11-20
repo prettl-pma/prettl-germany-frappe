@@ -7,12 +7,13 @@
  "engine": "InnoDB",
  "field_order": [
   "car",
-  "driver_email",
-  "driver_name",
-  "column_break_virw",
   "return_date",
   "handover_date",
-  "amended_from"
+  "amended_from",
+  "column_break_virw",
+  "driver_email",
+  "driver_first_name",
+  "driver_last_name"
  ],
  "fields": [
   {
@@ -45,14 +46,6 @@
    "options": "User"
   },
   {
-   "fetch_from": "driver_email.full_name",
-   "fieldname": "driver_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Driver Name(Fahrername)",
-   "read_only": 1
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -61,13 +54,29 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fetch_from": "driver_email.first_name",
+   "fieldname": "driver_first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Driver First Name(Vorname des Fahrers)",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "driver_email.last_name",
+   "fieldname": "driver_last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Driver Last Name(Nachname des Fahrers)",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-12 11:23:01.269651",
+ "modified": "2025-11-20 06:30:05.336982",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car Driver",

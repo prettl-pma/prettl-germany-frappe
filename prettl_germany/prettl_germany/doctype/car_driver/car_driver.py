@@ -10,7 +10,8 @@ class CarDriver(Document):
 		if self.car:
 			car = frappe.get_doc("Car", self.car)
 			car.current_driver_email = self.driver_email
-			car.current_driver_name = self.driver_name
+			car.current_driver_first_name = self.driver_first_name
+			car.current_driver_last_name = self.driver_last_name
 			car.handover_date = self.handover_date
 			car.return_date = self.return_date
 			car.save(ignore_permissions=True)
@@ -26,7 +27,7 @@ class CarDriver(Document):
 				"car": self.car,
 				"docstatus": 1,  # only submitted ones
 			},
-			fields=["driver_email", "driver_name", "handover_date", "return_date"],
+			fields=["driver_email", "driver_first_name", "driver_last_name", "handover_date", "return_date"],
 			order_by="modified desc",
 			limit=1
 		)
@@ -36,13 +37,15 @@ class CarDriver(Document):
 		if prev_driver:
 			driver = prev_driver[0]
 			car.current_driver_email = driver.driver_email
-			car.current_driver_name = driver.driver_name
+			car.current_driver_first_name = self.driver_first_name
+			car.current_driver_last_name = self.driver_last_name
 			car.handover_date = driver.handover_date
 			car.return_date = driver.return_date
 		else:
 			# No previous driver found → clear fields
 			car.current_driver_email = None
-			car.current_driver_name = None
+			car.current_driver_first_name = None
+			car.current_driver_last_name = None
 			car.handover_date = None
 			car.return_date = None
 
