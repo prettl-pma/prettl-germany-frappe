@@ -37,6 +37,10 @@ scheduler_events = {
         "0 6 26 12 *": [
             "prettl_germany.tasks.earned_leave_allocation.allocate_earned_leave"
         ],
+        # Saturday Leave on 26th of every month at 6 AM
+        "0 6 26 * *": [
+            "prettl_germany.tasks.saturday_leave_allocation.allocate_saturday_leave"
+        ],
     }
 }
 # Apps
