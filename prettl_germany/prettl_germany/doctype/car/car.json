@@ -92,21 +92,18 @@
   {
    "fieldname": "contract_number",
    "fieldtype": "Data",
-   "label": "Contract Number(Vertragsnummer)",
-   "reqd": 1
+   "label": "Contract Number(Vertragsnummer)"
   },
   {
    "fieldname": "contract_type",
    "fieldtype": "Link",
    "label": "Agreed type of Contract(Vertragsart)",
-   "options": "Car Contract Type",
-   "reqd": 1
+   "options": "Car Contract Type"
   },
   {
    "fieldname": "duration_of_contractin_months",
    "fieldtype": "Int",
-   "label": "Duration of Contract (In Months)(Laufzeit)",
-   "reqd": 1
+   "label": "Duration of Contract (In Months)(Laufzeit)"
   },
   {
    "fieldname": "remarks",
@@ -197,14 +194,12 @@
   {
    "fieldname": "agreed_start_date",
    "fieldtype": "Date",
-   "label": "Agreed Start Date(Vereinbarter Beginn)",
-   "reqd": 1
+   "label": "Agreed Start Date(Vereinbarter Beginn)"
   },
   {
    "fieldname": "agreed_end_date",
    "fieldtype": "Date",
-   "label": "Agreed End Date(Vereinbartes Ende)",
-   "reqd": 1
+   "label": "Agreed End Date(Vereinbartes Ende)"
   },
   {
    "fieldname": "actual_end_of_contract",
@@ -262,7 +257,7 @@
    "link_fieldname": "car"
   }
  ],
- "modified": "2025-11-20 06:30:47.729169",
+ "modified": "2025-12-02 11:58:27.703160",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Car",
