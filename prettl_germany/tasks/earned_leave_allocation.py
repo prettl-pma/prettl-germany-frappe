@@ -45,8 +45,8 @@ def allocate_earned_leave():
             {
                 "employee": emp.name,
                 "leave_type": leave_type,
-                "from_date": f"{next_year}-01-01",
-                "to_date": f"{next_year}-12-31",
+                "from_date": f"{today.year}-12-26",
+                "to_date": f"{next_year}-12-25",
                 "docstatus": 1
             }
         )
@@ -59,8 +59,8 @@ def allocate_earned_leave():
             "doctype": "Leave Allocation",
             "employee": emp.name,
             "leave_type": leave_type,
-            "from_date": f"{next_year}-01-01",
-            "to_date": f"{next_year}-12-31",
+            "from_date": f"{today.year}-12-26",
+            "to_date": f"{next_year}-12-25",
             "new_leaves_allocated": leave_count,
             "company": emp.company,
         })
