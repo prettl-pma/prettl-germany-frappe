@@ -47,6 +47,9 @@ scheduler_events = {
 doc_events = {
     "Leave Application": {
         "validate": "prettl_germany.api.leave_application.validate_saturday_leave"
+    },
+    "Attendance Request": {
+        "on_submit": "prettl_germany.api.attendance_request.on_submit"
     }
 }
 
