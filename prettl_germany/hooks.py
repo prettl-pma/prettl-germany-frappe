@@ -20,6 +20,12 @@ fixtures = [
         "filters": [
             ["role", "in", ["Car Management Edit", "Car Management Read"]]
         ]
+    },
+    {
+        "doctype": "Web Form",
+        "filters": [
+            ["name", "in", ["job-application"]]
+        ]
     }
 ]
 
