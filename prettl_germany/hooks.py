@@ -26,6 +26,13 @@ fixtures = [
         "filters": [
             ["name", "in", ["job-application"]]
         ]
+    },
+    {
+        "doctype": "Workspace",
+        "filters": [
+            ["name", "in", ["Shift & Attendance"]]
+        ]
+
     }
 ]
 
