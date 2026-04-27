@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{employee}-{month}-{financial_year}",
  "creation": "2026-04-27 18:35:32.260786",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -38,10 +39,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-27 18:39:49.529739",
+ "modified": "2026-04-27 19:31:54.797376",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Consultant Payslip",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
