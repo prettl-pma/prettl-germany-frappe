@@ -30,7 +30,7 @@ fixtures = [
     {
         "doctype": "Workspace",
         "filters": [
-            ["name", "in", ["Shift & Attendance"]]
+            ["name", "in", ["Shift & Attendance", "Payroll"]]
         ]
 
     }
