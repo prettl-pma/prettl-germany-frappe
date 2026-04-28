@@ -21,14 +21,18 @@
   {
    "fieldname": "month",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Month",
-   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "reqd": 1
   },
   {
    "fieldname": "financial_year",
    "fieldtype": "Link",
-   "label": "Financial Year",
-   "options": "Fiscal Year"
+   "in_list_view": 1,
+   "label": "Year",
+   "options": "Fiscal Year",
+   "reqd": 1
   },
   {
    "fieldname": "attachment",
@@ -39,7 +43,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-27 19:31:54.797376",
+ "modified": "2026-04-28 12:49:14.551651",
  "modified_by": "Administrator",
  "module": "Prettl Germany",
  "name": "Consultant Payslip",
