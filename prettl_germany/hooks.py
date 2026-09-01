@@ -134,11 +134,11 @@ doc_events = {
 # Jinja
 # ----------
 
-# add methods and filters to jinja environment
-# jinja = {
-# 	"methods": "prettl_germany.utils.jinja_methods",
-# 	"filters": "prettl_germany.utils.jinja_filters"
-# }
+jinja = {
+    "methods": [
+        "prettl_germany.api.salary_slip.get_company_header"
+    ]
+}
 
 # Installation
 # ------------
