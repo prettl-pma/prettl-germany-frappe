@@ -1,7 +1,6 @@
 # Helpers for the Salary Slip print format.
-# The payslip header (company name, address, logo) is read from the Company
-# record so that every company - PreBo, PMA, and any added later - prints on
-# its own header without touching the print format.
+# Only the companies in HEADER_COMPANIES print a payslip header. The name comes
+# from that mapping; the address and logo are read from the Company record.
 
 import frappe
 from frappe.utils.caching import request_cache
@@ -15,6 +14,16 @@ ADDRESS_FIELDS = ("address_line1", "address_line2", "city", "state")
 LOGO_MAX_WIDTH = 195
 LOGO_MAX_HEIGHT = 70
 
+# Companies whose payslips carry a header, mapped to the name to print on it
+# (PMA trades under a different name than its Company record). Any company not
+# listed here prints its payslip without a header.
+HEADER_COMPANIES = {
+    "Prebo Automotive Private Limited": "Prebo Automotive Private Limited",
+    "Prettl mechatronics & Actuators Services Private Limited": (
+        "PMA Production & Services Private Limited"
+    ),
+}
+
 
 @request_cache
 def get_company_header(company):
@@ -23,9 +32,14 @@ def get_company_header(company):
     Cached per request so printing a whole payroll run looks up each company once.
     """
 
-    header = frappe._dict(company_name="", address="", logo="")
+    header = frappe._dict(
+        show=False, company_name="", address="", logo="", logo_width=None, logo_height=None
+    )
 
     if not company:
+        return header
+
+    if company not in HEADER_COMPANIES:
         return header
 
     details = frappe.db.get_value(
@@ -35,7 +49,9 @@ def get_company_header(company):
     if not details:
         return header
 
-    header.company_name = details.company_name or company
+    header.show = True
+
+    header.company_name = HEADER_COMPANIES[company] or details.company_name or company
     header.logo = details.company_logo or ""
     header.address = get_company_address_line(company)
     header.logo_width, header.logo_height = get_logo_size(header.logo)
